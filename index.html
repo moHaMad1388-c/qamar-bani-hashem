@@ -8,54 +8,37 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="sidebar">
-    <h2>موکب</h2>
-    <ul>
-        <li>داشبورد</li>
-        <li>نذری</li>
-        <li>دخل و خرج</li>
-        <li>اعضا</li>
-        <li>اطلاعیه‌ها</li>
-    </ul>
+<div class="container">
+<h1>موکب جوانان قمر بنی هاشم</h1>
+
+<div class="card">
+<h2>افزودن عضو</h2>
+<input id="memberName" placeholder="نام عضو">
+<button onclick="addMember()">ثبت عضو</button>
+<ul id="members"></ul>
 </div>
 
-<div class="main">
-    <header>
-        <img src="logo.png" class="logo">
-        <div>
-            <h1>موکب جوانان قمر بنی هاشم</h1>
-            <p>پنل مدیریت هیئت و نذری</p>
-        </div>
-    </header>
-
-    <section class="cards">
-        <div class="card">
-            <h3>اعضا</h3>
-            <p>124 نفر</p>
-        </div>
-        <div class="card">
-            <h3>نذری امروز</h3>
-            <p>850 پرس</p>
-        </div>
-        <div class="card">
-            <h3>موجودی صندوق</h3>
-            <p>28,000,000 تومان</p>
-        </div>
-    </section>
-
-    <section class="panel">
-        <h2>ثبت دخل و خرج</h2>
-        <input placeholder="عنوان هزینه یا درآمد">
-        <input placeholder="مبلغ">
-        <button>ثبت</button>
-    </section>
-
-    <section class="panel">
-        <h2>ثبت نذری</h2>
-        <input placeholder="نوع نذری">
-        <input placeholder="تعداد">
-        <button>ثبت نذری</button>
-    </section>
+<div class="card">
+<h2>ثبت نذری</h2>
+<input id="nazriName" placeholder="نوع نذری">
+<input id="nazriCount" placeholder="تعداد">
+<button onclick="addNazri()">ثبت نذری</button>
+<ul id="nazriList"></ul>
 </div>
+
+<div class="card">
+<h2>دخل و خرج</h2>
+<input id="moneyTitle" placeholder="عنوان">
+<input id="moneyAmount" placeholder="مبلغ">
+<select id="moneyType">
+<option value="income">درآمد</option>
+<option value="expense">هزینه</option>
+</select>
+<button onclick="addMoney()">ثبت</button>
+<ul id="moneyList"></ul>
+</div>
+
+</div>
+<script src="script.js"></script>
 </body>
 </html>
